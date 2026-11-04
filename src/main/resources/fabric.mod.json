@@ -8,8 +8,7 @@
 		"TerexG"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/TerexG/MCCI-XP-Level-Color"
 	},
 	"license": "MIT",
 	"icon": "assets/mcci-xp-level-color/icon.png",
