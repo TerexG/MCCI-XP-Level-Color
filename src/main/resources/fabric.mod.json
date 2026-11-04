@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "mcci-xp-level-color",
+	"version": "${version}",
+	"name": "MCCI XP Level Color",
+	"description": "Changes the color of the XP level text when on the MCC Island server.",
+	"authors": [
+		"TerexG"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/mcci-xp-level-color/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"terexg.mccixplevelcolor.client.MCCIXPLevelColorClient"
+		],
+		"modmenu": [
+			"terexg.mccixplevelcolor.config.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"mcci-xp-level-color.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"yet_another_config_lib_v3": ">=3.9.7+26.3-fabric"
+	}
+}

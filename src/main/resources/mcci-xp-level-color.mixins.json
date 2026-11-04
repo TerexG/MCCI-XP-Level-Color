@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "terexg.mccixplevelcolor.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"ContextualBarMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

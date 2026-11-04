@@ -1,0 +1,17 @@
+{
+    "mcci-xp-level-color.title": "MCCI XP Level Color Config",
+    "mcci-xp-level-color.category.general": "General",
+    "mcci-xp-level-color.category.general.tooltip": "Settings for the MCCI XP Level Color mod.",
+    "mcci-xp-level-color.mode": "Mode",
+    "mcci-xp-level-color.mode.description": "Which colors to use for the XP level text.\n\nVanilla: Default vanilla colors.\nStatic: Changes the colors to fit the MCCI XP bar texture.\nDynamic: The colors will change based on your Crown Level.\nCustom: Uses custom colors set in the options below.",
+    "mcci-xp-level-color.mode.vanilla": "Vanilla",
+    "mcci-xp-level-color.mode.static": "Static",
+    "mcci-xp-level-color.mode.dynamic": "Dynamic",
+    "mcci-xp-level-color.mode.custom": "Custom",
+    "mcci-xp-level-color.custom-color": "Custom Color - Text",
+    "mcci-xp-level-color.custom-color.description": "The color of the XP level text when in Custom mode.",
+    "mcci-xp-level-color.custom-outline-color": "Custom Color - Outline",
+    "mcci-xp-level-color.custom-outline-color.description": "The color of the XP level text outline when in Custom mode.",
+    "mcci-xp-level-color.disable-mcci-check": "Disable MCC Island Check",
+    "mcci-xp-level-color.disable-mcci-check.description": "Will make the mod also work outside of MCC Island."
+}
