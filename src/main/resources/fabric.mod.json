@@ -8,7 +8,8 @@
 		"TerexG"
 	],
 	"contact": {
-		"sources": "https://github.com/TerexG/MCCI-XP-Level-Color"
+		"sources": "https://github.com/TerexG/MCCI-XP-Level-Color",
+		"issues": "https://github.com/TerexG/MCCI-XP-Level-Color/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/mcci-xp-level-color/icon.png",
