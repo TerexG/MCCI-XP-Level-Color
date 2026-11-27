@@ -32,93 +32,46 @@ public class MCCIXPLevelColorClient implements ClientModInitializer {
         return host.equals("mccisland.net") || host.endsWith(".mccisland.net");
     }
 
-	public static int getExperienceLevelColor(int level) {
-		if (onMCCIsland || Config.HANDLER.instance().disableMCCICheck) {
-			switch (Config.HANDLER.instance().mode) {
-				case "vanilla":
-					return 0xFF80FF20;
-				case "static":
-					return 0xFFFFE600;
-				case "dynamic":
-					return getDynamicColor(level);
-				case "custom":
-					return Config.HANDLER.instance().customColor;
-				default:
-					return 0xFF80FF20;
-			}
-		} else {
-			return 0xFF80FF20;
+	public static int[] getExperienceLevelColor(int level) {
+		switch (Config.HANDLER.instance().mode) {
+			case "static":
+				return new int[]{0xFFFFE600, 0xFF590000};
+			case "dynamic":
+				return getDynamicColor(level);
+			case "custom":
+				return new int[]{Config.HANDLER.instance().customColor, Config.HANDLER.instance().customOutlineColor};
+			default:
+				return new int[]{0xFF80FF20, 0xFF000000};
 		}
 	}
 
-	public static int getExperienceLevelOutlineColor(int level) {
-		if (onMCCIsland || Config.HANDLER.instance().disableMCCICheck) {
-			switch (Config.HANDLER.instance().mode) {
-				case "vanilla":
-					return 0xFF000000;
-				case "static":
-					return 0xFF590000;
-				case "dynamic":
-					return getDynamicOutlineColor(level);
-				case "custom":
-					return Config.HANDLER.instance().customOutlineColor;
-				default:
-					return 0xFF000000;
-			}
-		} else {
-			return 0xFF000000;
-		}
-	}
-
-	private static int getDynamicColor(int level) {
+	private static int[] getDynamicColor(int level) {
 		if (level < 10) {
-			return 0xFF858586;
+			return new int[]{0xFF858586, 0xFF0E0E0E};
 		} else if (level < 20) {
-			return 0xFFCDCDED;
+			return new int[]{0xFFCDCDED, 0xFF282855};
 		} else if (level < 30) {
-			return 0xFF9DFFA2;
+			return new int[]{0xFF9DFFA2, 0xFF084300};
 		} else if (level < 40) {
-			return 0xFF89DAFF;
+			return new int[]{0xFF89DAFF, 0xFF001A41};
 		} else if (level < 50) {
-			return 0xFFE86BFF;
+			return new int[]{0xFFE86BFF, 0xFF12106B};
 		} else if (level < 60) {
-			return 0xFFFFC300;
+			return new int[]{0xFFFFC300, 0xFF530300};
 		} else if (level < 70) {
-			return 0xFFFF9F82;
+			return new int[]{0xFFFF9F82, 0xFF7B0035};
 		} else if (level < 80) {
-			return 0xFF8DF0D3;
+			return new int[]{0xFF8DF0D3, 0xFF154AB5};
 		} else if (level < 90) {
-			return 0xFF91F1FF;
+			return new int[]{0xFF91F1FF, 0xFF6002BB};
 		} else if (level < 100) {
-			return 0xFFF75BFF;
+			return new int[]{0xFFF75BFF, 0xFF7B0035};
 		} else {
-			return 0xFFF278FD;
+			return new int[]{0xFFF278FD, 0xFF191672};
 		}
 	}
 
-	private static int getDynamicOutlineColor(int level) {
-		if (level < 10) {
-			return 0xFF0E0E0E;
-		} else if (level < 20) {
-			return 0xFF282855;
-		} else if (level < 30) {
-			return 0xFF084300;
-		} else if (level < 40) {
-			return 0xFF001A41;
-		} else if (level < 50) {
-			return 0xFF12106B;
-		} else if (level < 60) {
-			return 0xFF530300;
-		} else if (level < 70) {
-			return 0xFF7B0035;
-		} else if (level < 80) {
-			return 0xFF154AB5;
-		} else if (level < 90) {
-			return 0xFF6002BB;
-		} else if (level < 100) {
-			return 0xFF7B0035;
-		} else {
-			return 0xFF191672;
-		}
+	public static boolean modEnabled() {
+		return Config.HANDLER.instance().mode != "vanilla" && (onMCCIsland || Config.HANDLER.instance().disableMCCICheck);
 	}
 }
